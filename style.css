@@ -37,6 +37,18 @@ a:hover { text-decoration: underline; }
   border-bottom: 1px solid var(--border);
   padding-bottom: 28px;
   margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-text { flex: 1; min-width: 0; }
+
+.hero-mascot {
+  flex: 0 0 auto;
+  width: 96px;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
 }
 
 .kicker {
@@ -45,6 +57,14 @@ a:hover { text-decoration: underline; }
   font-size: 12px;
   color: var(--accent);
   margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.kicker img {
+  width: 18px;
+  height: 18px;
 }
 
 h1 {
@@ -134,10 +154,48 @@ footer {
 
 footer .repo { margin-top: 6px; }
 
+/* Standardized site footer — source link, GitHub, socials */
+.site-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.site-footer p { margin: 4px 0; }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+}
+
+.footer-links a:hover { color: var(--text); text-decoration: none; }
+
+.footer-links .dot { color: var(--border); }
+
+.icon {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+}
+
 @media (max-width: 600px) {
   main { padding: 28px 16px 60px; }
   h1 { font-size: 28px; }
   section { padding: 18px 18px; }
+  .hero { flex-direction: column-reverse; align-items: flex-start; }
+  .hero-mascot { width: 72px; }
 }
 
 /* --- additions for the May 20 patch page --- */
